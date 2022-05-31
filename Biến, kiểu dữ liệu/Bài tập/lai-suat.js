@@ -1,7 +1,7 @@
 let loan = parseInt(prompt("số tiền vay la: "));
-let interestRate = prompt("Lãi xuất phần trăm mỗi năm là: ");
+let interestRate = parseFloat(prompt("Lãi xuất phần trăm mỗi năm là: "));
 let year = prompt("Số năm vay là: ");
-let interest = ((loan * interestRate) / 100);
+let interest = ((loan * interestRate) / 100)*year;
 interest += loan;
 
  
