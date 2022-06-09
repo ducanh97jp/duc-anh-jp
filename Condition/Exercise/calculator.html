@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        button {
+            width: 35px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input style="width: 200px;" type="number" id="number"></td>
+        </tr>
+        <tr>
+            <td><button onclick="number1(1)">1</button></td>
+            <td><button onclick="number2(2)">2</button></td>
+            <td><button onclick="number3(3)">3</button></td>
+            <td><button onclick="summation()">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="number4(4)">4</button></td>
+            <td><button onclick="number5(5)">5</button></td>
+            <td><button onclick="number6(6)">6</button></td>
+            <td><button onclick="subtraction()">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="number7(7)">7</button></td>
+            <td><button onclick="number8(8)">8</button></td>
+            <td><button onclick="number9(9)">9</button></td>
+            <td><button onclick="multiplication()">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="numberc()">C</button></td>
+            <td><button onclick="number10(0)">0</button></td>
+            <td><button onclick="result()">=</button></td>
+            <td><button onclick="division()">/</button></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
+<script>
+    function number1(a) {
+        document.getElementById("number").innerHTML=a;
+    }
+    function number2(b) {
+        document.getElementById("number").innerHTML=b;
+    }
+    function number3(c) {
+        document.getElementById("number").innerHTML=c;
+    }
+    function number4(d) {
+        document.getElementById("number").innerHTML=d;
+    }
+    function number5(e) {
+        document.getElementById("number").innerHTML=e;
+    }
+    function number6(f) {
+        document.getElementById("number").innerHTML=f;
+    }
+    function number7(g) {
+        document.getElementById("number").innerHTML=g;
+    }
+    function number8(h) {
+        document.getElementById("number").innerHTML=h;
+    }
+    function number9(i) {
+        document.getElementById("number").innerHTML=i;
+    }
+    function number10(k) {
+        document.getElementById("number").innerHTML=k;
+    }
+    function summation() {
+        document.getElementById("number").innerHTML='+';
+    }
+    function subtraction() {
+        document.getElementById("number").innerHTML='-';
+    }
+    function multiplication() {
+        document.getElementById("number").innerHTML='*';
+    }
+    function division() {
+        document.getElementById("number").innerHTML='/';
+    }
+    function result() {
+        document.getElementById("number").innerHTML='=';
+    }
+    function numberc() {
+        document.getElementById("number").innerHTML='';
+    }
+</script>
