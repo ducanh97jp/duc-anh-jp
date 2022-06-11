@@ -15,21 +15,21 @@
     let height = parseFloat(prompt("Enter the height: "));
     let BMI = weight / Math.pow(height,2);
     console.log(BMI);
-    if (BMI>40) {
+    if (BMI>=40) {
         alert('Béo phì cấp độ III');
-    } else if (BMI<40 && BMI>=35) {
+    } else if (BMI>=35) {
         alert('Béo phì cấp độ II');
-    }else if (BMI<35 && BMI>=30) {
+    }else if (BMI>=30) {
         alert('Béo phì cấp độ I');
-    } else if (BMI<30 && BMI>=25) {
+    } else if (BMI>=25) {
         alert('Thừa cân');
-    } else if (BMI<25 && BMI>=18.5) {
+    } else if (BMI>=18.5) {
         alert('Bình thường');
-    } else if (BMI<18.5 && BMI>=17) {
+    } else if (BMI>=17) {
         alert('Gầy cấp độ I');
-    } else if (BMI<17 && BMI>=16) {
+    } else if (BMI>=16) {
         alert('Gầy cấp độ II');
-    } else if (BMI<16) {
+    } else {
         alert('Gầy cấp độ III');
     }
 </script>
