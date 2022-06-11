@@ -14,29 +14,29 @@
 <body>
     <table>
         <tr>
-            <td colspan="4"><input style="width: 200px;" type="number" id="number" value=""></td>
+            <td colspan="4"><input style="width: 200px;" type="text" id="number" value=""></td>
         </tr>
         <tr>
-            <td><button onclick="number1(1)">1</button></td>
-            <td><button onclick="number2(2)">2</button></td>
-            <td><button onclick="number3(3)">3</button></td>
+            <td><button onclick="number1()">1</button></td>
+            <td><button onclick="number2()">2</button></td>
+            <td><button onclick="number3()">3</button></td>
             <td><button onclick="summation()">+</button></td>
         </tr>
         <tr>
-            <td><button onclick="number4(4)">4</button></td>
-            <td><button onclick="number5(5)">5</button></td>
-            <td><button onclick="number6(6)">6</button></td>
+            <td><button onclick="number4()">4</button></td>
+            <td><button onclick="number5()">5</button></td>
+            <td><button onclick="number6()">6</button></td>
             <td><button onclick="subtraction()">-</button></td>
         </tr>
         <tr>
-            <td><button onclick="number7(7)">7</button></td>
-            <td><button onclick="number8(8)">8</button></td>
-            <td><button onclick="number9(9)">9</button></td>
+            <td><button onclick="number7()">7</button></td>
+            <td><button onclick="number8()">8</button></td>
+            <td><button onclick="number9()">9</button></td>
             <td><button onclick="multiplication()">*</button></td>
         </tr>
         <tr>
             <td><button onclick="numberc()">C</button></td>
-            <td><button onclick="number10(0)">0</button></td>
+            <td><button onclick="number10()">0</button></td>
             <td><button onclick="result()">=</button></td>
             <td><button onclick="division()">/</button></td>
         </tr>
@@ -44,195 +44,93 @@
     </table>
 </body>
 </html>
-<script>
-    function num<style>
-    button {
-        color: blue;
-        width: 50px;
-        height: 25px;
+<script> 
+    function numberc() {
+        document.getElementById("number").value='';
     }
-    
-    input {
-        width: 260px;
-        height: 40px;
+    function number1() {
+        document.getElementById("number").value+= 1;
     }
-</style>
-
-<body>
-
-    <body>
-        <form>
-            <fieldset style="width: 280px">
-                <table>
-                    <tr>
-                        <th colspan="4"> <input type="text" name="" id="" value=""><br><br> </th>
-                    </tr>
-                    <tr>
-                        <th><button type="button" value="7" onclick="hienthi7()">7</button> </th>
-                        <th><button type="button" value="8" onclick="hienthi8()">8</button> </th>
-                        <th><button type="button" value="9" onclick="hienthi9()">9</button> </th>
-                        <th><button type="button" value="/" onclick="Div()">/</button> </th>
-                    </tr>
-                    <tr>
-                        <th><button type="button" value="4" onclick="hienthi4()">4</button> </th>
-                        <th> <button type="button" value="5" onclick="hienthi5()">5</button> </th>
-                        <th> <button type="button" value="6" onclick="hienthi6()">6</button> </th>
-                        <th> <button type="button" value="*" onclick="Mul()">x</button> </th>
-                    </tr>
-                    <tr>
-                        <th> <button type="button" value="1" onclick="hienthi1()">1</button> </th>
-                        <th> <button type="button" value="2" onclick="hienthi2()">2</button> </th>
-                        <th> <button type="button" value="3" onclick="hienthi3()">3</button> </th>
-                        <th> <button type="button" value="-" onclick="Sub()">-</button> </th>
-                    </tr>
-                    <tr>
-                        <th> <button type="button" value="0" onclick="hienthi0()">0</button> </th>
-                        <th> <button type="button" onclick="">.</button> </th>
-                        <th> <button type="button" onclick="ketqua()" style="background-color: blue; color: white">=</button> </th>
-                        <th> <button type="button" value="+" onclick="Sum()">+</button> </th>
-                    </tr>
-                </table>
-            </fieldset>
-        </form>
-        <script>
-            let hienthi = document.querySelector("input");
-            function hienthi0() {
-                hienthi.value += 0;
-            }
-
-            function hienthi1() {
-                hienthi.value += 1;
-            }
-
-            function hienthi2() {
-                hienthi.value += 2;
-            }
-
-            function hienthi3() {
-                hienthi.value += 3;
-            }
-
-            function hienthi4() {
-                hienthi.value += 4;
-            }
-
-            function hienthi5() {
-                hienthi.value += 5;
-            }
-
-            function hienthi6() {
-                hienthi.value += 6;
-            }
-
-            function hienthi7() {
-                hienthi.value += 7;
-}
-
-            function hienthi8() {
-                hienthi.value += 8;
-            }
-
-            function hienthi9() {
-                hienthi.value += 9;
-            }
-
-            function Sum() {
-                hienthi.value += "+";
-            }
-
-            function Sub() {
-                hienthi.value += "-";
-            }
-
-            function Mul() {
-                hienthi.value += "*";
-            }
-
-            function Div() {
-                hienthi.value += "/";
-            }
-
-            function ketqua() {
-
-                let toan_tu_cong = hienthi.value.indexOf("+");
-                let toan_tu_tru = hienthi.value.indexOf("-");
-                let toan_tu_nhan = hienthi.value.indexOf("*");
-                let toan_tu_chia = hienthi.value.indexOf("/");
-        
-                let toantucong1 = parseInt(hienthi.value.slice(0,toan_tu_cong));
-                let toantucong2 = parseInt(hienthi.value.slice(toan_tu_cong+1,));
-               
-
-                let toantutru1 = parseInt(hienthi.value.slice(0,toan_tu_tru));
-                let toantutru2 = parseInt(hienthi.value.slice(toan_tu_tru+1,));
-                
-
-                let toantunhan1 = parseInt(hienthi.value.slice(0,toan_tu_nhan));
-                let toantunhan2 = parseInt(hienthi.value.slice(toan_tu_nhan + 1,));
-
-
-                let toantuchia1 = parseInt(hienthi.value.slice(0,toan_tu_chia));
-                let toantuchia2 = parseInt(hienthi.value.slice(toan_tu_chia + 1,));
-
-
-                if (toan_tu_cong != -1) {
-                    hienthi.value = toantucong1 + toantucong2;
-                } else if (toan_tu_tru != -1) {
-                    hienthi.value = toantutru1 - toantutru2;
-                } else if (toan_tu_nhan != -1) {
-                    hienthi.value = toantunhan1 * toantunhan2;
-                } else if (toan_tu_chia != -1) {
-                    hienthi.value = toantuchia1 /toantuchia2;
-                }
-            }
-        </script>
-    </body>
-Kiến thức bài này em dùng DOM , với 1 số làm xử lí chuỗi.ber1(a) {
-        document.getElementById("number").innerHTML=a;
+    function number2() {
+        document.getElementById("number").value+= 2;
     }
-    function number2(b) {
-        document.getElementById("number").innerHTML=b;
+    function number3() {
+        document.getElementById("number").value+= 3;
     }
-    function number3(c) {
-        document.getElementById("number").innerHTML=c;
+    function number4() {
+        document.getElementById("number").value+= 4;
     }
-    function number4(d) {
-        document.getElementById("number").innerHTML=d;
+    function number5() {
+        document.getElementById("number").value+= 5;
     }
-    function number5(e) {
-        document.getElementById("number").innerHTML=e;
+    function number6() {
+        document.getElementById("number").value+= 6;
     }
-    function number6(f) {
-        document.getElementById("number").innerHTML=f;
+    function number7() {
+        document.getElementById("number").value+= 7;
     }
-    function number7(g) {
-        document.getElementById("number").innerHTML=g;
+    function number8() {
+        document.getElementById("number").value+= 8;
     }
-    function number8(h) {
-        document.getElementById("number").innerHTML=h;
+    function number9() {
+        document.getElementById("number").value+= 9;
     }
-    function number9(i) {
-        document.getElementById("number").innerHTML=i;
-    }
-    function number10(k) {
-        document.getElementById("number").innerHTML=k;
+    function number10() {
+        document.getElementById("number").value+= 0;
     }
     function summation() {
-        document.getElementById("number").innerHTML='+';
+        document.getElementById("number").value+='+';
     }
     function subtraction() {
-        document.getElementById("number").innerHTML='-';
+        document.getElementById("number").value+='-';
     }
     function multiplication() {
-        document.getElementById("number").innerHTML='*';
+        document.getElementById("number").value+='*';
     }
     function division() {
-        document.getElementById("number").innerHTML='/';
+        document.getElementById("number").value+='/';
     }
+    
     function result() {
-        document.getElementById("number").innerHTML='=';
+        let phep_tinh = document.getElementById("number").value;
+        let summation = (phep_tinh.indexOf('+'));
+        let subtraction = (phep_tinh.indexOf('-'));
+        let multiplication = (phep_tinh.indexOf('*'));
+        let division = (phep_tinh.indexOf('/'));
+            if (summation !=-1) {
+            let phep_tinh1 = (phep_tinh.slice(0,summation));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(summation+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 + phep_tinh2;
+        } else if (subtraction !=-1) {
+            let phep_tinh1 = (phep_tinh.slice(0,subtraction));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(subtraction+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 - phep_tinh2;
+        } else if (multiplication !=-1){
+            let phep_tinh1 = (phep_tinh.slice(0,multiplication));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(multiplication+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 * phep_tinh2;
+        } else if (division!=-1) {
+            let phep_tinh1 = (phep_tinh.slice(0,division));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(division+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 / phep_tinh2;
+        } else {
+            phep_tinh= phep_tinh;
+        }
+        console.log(phep_tinh);
+        document.getElementById('number').value=phep_tinh;
+        
     }
-    function numberc() {
-        document.getElementById("number").innerHTML='';
-    }
+    
 </script>
