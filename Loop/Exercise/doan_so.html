@@ -12,18 +12,18 @@
 </body>
 </html>
 <script>
-    function game() {
-    let number = parseFloat(prompt('Nhập số bất kỳ từ 1 ->100'));
+    function game() {debugger;
+        let min = parseInt(prompt('Nhập số bé nhất đươc chon: '));
+        let max = parseInt(prompt('Nhập số lớn nhất đươc chon: '));
+        let result = Math.floor(Math.random() * (max - min + 1)) + min;
         for (let i = 1;i<=3;i++) { 
-            if (number ==34) {
+            let value = parseInt(prompt("Nhập số bạn chọn: "));
+            if (result == value) {
                 alert('Chúc mừng bạn đoán đúng');
-                break;
-            }
-            alert('Sai rồi!');
-            number = parseFloat(prompt('Nhập số bất kỳ từ 1 ->100'));
-            
+                return;
+            } 
         }
-    
+        alert('Sai rồi!');
     }
 
 </script>
